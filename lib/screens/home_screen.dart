@@ -31,12 +31,11 @@ class _HomeScreenState extends State<HomeScreen> {
           decoration: const BoxDecoration(
               gradient: LinearGradient(
             transform: GradientRotation(0.1),
-            // begin: Alignment.topCenter,
+            begin: Alignment.bottomLeft,
             colors: [
+              Colors.white,
+              // Colors.black54,
               Colors.blue,
-              // Colors.red,
-              Colors.greenAccent,
-              Colors.yellow,
             ],
           )),
           padding: const EdgeInsets.only(left: 40, right: 40),
@@ -97,8 +96,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               ElevatedButton(
                 onPressed: () async {
-                  // https://wa.me/1XXXXXXXXXX?text=I'm%20interested%20in%20your%20car%20for%20sale
-
                   if (phone.length < 10) {
                     Fluttertoast.showToast(
                         msg: "Enter a valid phone number",
